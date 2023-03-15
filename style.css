@@ -1,0 +1,271 @@
+:root{
+   /* primary */
+   --soft-orange:hsl(35, 77%, 62%);
+   --Soft-red: hsl(5, 85%, 63%);
+   /* neutral */
+   --Off-white: hsl(36, 100%, 99%);
+   --Grayish-blue: hsl(233, 8%, 79%);
+   --Dark-grayish-blue: hsl(236, 13%, 42%);
+   --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+body{
+   font-family: 'Inter', sans-serif;
+   background-color: var(--Off-white) ;
+   padding:40px    ;
+   max-width: 1440px; /* Establece el ancho máximo del contenedor */
+   margin: 0 auto; /* Centra horizontalmente el contenedor */
+}
+.navbar__container{
+   display: flex;
+   justify-content: space-between;
+   margin: 40px 0;
+}
+
+.navbar__container ul{
+   display: flex;
+   color:var(--Dark-grayish-blue);
+   padding: 15px;
+   list-style: none;
+   
+}
+
+.navbar__container a{
+   text-decoration: none;
+   margin-left: 65px;
+   color: var(--Very-dark-blue);
+}
+.main__container{
+   display: flex;
+}
+.navbar__container button {
+   display: none;
+}
+
+/* section principal  */
+.section__principal{
+   width: 66%;
+   margin-right: 30px;
+}
+.section__principal .img{
+   background-image: url("./assets/images/image-web-3-desktop.jpg");
+   width: 100%;
+   height:56%;
+   /* para que si ampliamos , la imagen siempre este centrada */
+   background-size: cover;
+   /* para que la imagen siempre este centrada */
+   background-position: center;
+   /* para que si ampliamos la imagen  la imagen no se repita */
+   background-repeat: no-repeat;
+   
+}
+.section__principal-textbutton{
+   display: flex;
+}
+.section__principal-texto{
+   width: 53%;
+}
+.section__principal-texto h1{
+   color: var(--Very-dark-blue);
+   font-size:62px;
+   padding:50px 70px 0 0;
+   font-weight:800;
+   line-height: 1;
+   ;
+
+}
+.section__principal-button{
+   width: 47%;
+}
+.section__principal-button p{
+   color: var(--Very-dark-blue);
+   font-size:17px;
+   padding: 50px 0 60px 0  ;
+   line-height: 1.5;
+   text-align: left;
+   
+}
+.section__principal-button button{
+   padding: 20PX 35px ;
+   color: var(--Off-white);
+   font-size:16px;
+   background-color: var(--Soft-red);
+   letter-spacing: 7px ;
+   border: none;
+}
+
+/* section del aside  */
+.section__aside{
+   width:34%;
+   background-color:var(--Very-dark-blue);
+   color: var(--Off-white);
+   padding: 33px 30px 0 30px;
+}
+.section__aside h2{
+   color: var(--soft-orange);
+   font-size: 45px;
+   
+}
+.section__aside-article{
+   padding: 28px 0px;
+}
+.section__aside-article h3{
+   font-size:26px;
+
+}
+.section__aside-article p {
+   color: var(--Grayish-blue);
+   padding: 15px 0px;
+   font-size: 20px;
+   line-height: 1.5;
+}
+.section__aside-article:nth-child(3),.section__aside-article:nth-child(4){
+   border-top:1px solid var(--Grayish-blue)
+}
+/* section inferior de la parte principal */
+.section__asidebottoms{
+   display: flex;
+   margin: 80px 0;
+}
+.section__asidebottom{
+   display: flex;
+}
+.section__asidebottom img{
+   width: 110px;
+}
+.section__asidebottom-texto{
+   padding:0 0 0 23px;
+   width:300px;
+   margin-right: 47px;
+}
+.section__asidebottom-texto p:nth-child(1) {
+   font-size:35px ;
+   color: var(--Grayish-blue);
+   font-weight: 700;
+   padding-bottom: 15px;
+}
+.section__asidebottom-texto h3{
+   padding-bottom: 15px;
+   font-size: 21px;
+}
+.section__asidebottom-texto p:nth-child(3){
+   font-size: 18px;
+   line-height: 1.5;
+}
+
+
+
+
+
+@media(max-width:376px){
+   .navbar__container ul{
+      display:none;
+   }
+   
+   .navbar__container .menu-button {
+      display: block;
+   }
+   .navbar__container .menu-button img {
+      width: 40px;
+      height: 30px;
+   }
+   .navbar__container button{
+      border: none;
+   }
+   body{
+      padding:15px;
+   }
+   .main__container{
+      display: block;
+   }
+   .section__principal{
+      width: 100%;
+      
+   }
+   .section__principal .img{
+      background-image: url("./assets/images/image-web-3-mobile.jpg");
+      width: auto;
+      height:300px;
+   /* para que si ampliamos , la imagen siempre este centrada */
+      background-size: cover;
+   /* para que la imagen siempre este centrada */
+      background-position: center;
+   /* para que si ampliamos la imagen  la imagen no se repita */
+      background-repeat: no-repeat;
+   }
+   /* section de principal del articulo */
+   .section__principal-textbutton{
+      display:block;
+   }
+   .section__principal-texto{
+      width: 100%;
+      display: block;
+   }
+   .section__principal-texto h1{
+      width: 100%;
+      margin-top: 50px;
+      padding: 0;
+      font-size: 45px;
+   }
+   .section__principal-button{
+      width: 100%;
+   }
+   .section__principal-button p{
+      margin-top: 30px;
+      color: var(--Dark-grayish-blue);
+      padding: 0;
+      line-height:2;
+   }
+   .section__principal-button button{
+      margin-top:30px ;
+      padding: 10PX 25px ;
+      font-weight: 500;
+   }
+
+
+   .section__aside{
+      margin-top:60px ;
+      width: 100%;
+      display: block;
+      
+   }
+   .section__aside h2{
+      font-size:30px;
+   }
+   .section__aside-article h3{
+      font-size: 18px;
+   }
+   .section__aside-article p{
+      font-size:14px;
+   }
+
+   .section__asidebottoms{
+      display: block;
+   }
+   .section__asidebottom-texto{
+      margin: 0;
+   }
+   .section__asidebottom{
+      padding: 20px 0;
+   }
+   .section__asidebottom img{
+      height:150px;
+   }
+   .section__asidebottom-texto p:nth-child(1){
+font-size: 30px;
+   }
+   .section__asidebottom-texto h3{
+      font-size:17px;
+   }
+   .section__asidebottom-texto p:nth-child(3){
+      font-size:14px;
+      color: var(--Dark-grayish-blue);
+   }
+}
